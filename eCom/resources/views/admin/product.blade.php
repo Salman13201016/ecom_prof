@@ -3,6 +3,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -283,7 +284,7 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Main Category form</h4>
-                    <form class="forms-sample" method="post" action="#">
+                    <form class="forms-sample prod_sub" method="post" action="#">
                       @csrf
                       <div class="form-group">
                         <label for="exampleInputUsername1">Select Category</label>
@@ -305,7 +306,7 @@
                          
                           class="form-control"
                           id="sel_sub_cat"
-                          name ="cat_id"
+                          name ="sub_cat_id"
                         >
                             <option>Select Sub Category</option>
                             @foreach($sub_cat_data as $d)
@@ -319,8 +320,8 @@
                           type="text"
                           class="form-control"
                           id="exampleInputUsername1"
-                          name ="add_sub_cat"
-                          placeholder="Enter Product Sub Category Name"
+                          name ="prod_name"
+                          placeholder="Enter Product Name"
                         />
                       </div>
                       <div class="form-group">
@@ -329,7 +330,7 @@
                           type="text"
                           class="form-control"
                           id="exampleInputUsername1"
-                          name ="add_sub_cat"
+                          name ="prod_desc"
                           placeholder="Enter Product Sub Category Name"
                         />
                       </div>
@@ -340,23 +341,23 @@
                           type="file"
                           class="form-control"
                           id="exampleInputUsername1"
-                          name ="add_sub_cat"
+                          name ="prod_image"
                          
                         />
                 </div>
                         <div class="form-group">
                             <label for="exampleInputUsername1">Add Weight 1</label>
                         <div class="d-flex">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="exampleInputUsername1"
-                          name ="add_sub_cat"
-                          placeholder="Enter Product Weight (E.g, 3ML, 6ML)"
-                        />
-                        <a href="#" id ="add_more_weight" class="btn btn-primary me-2">
-                        Add More
-                        </a>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="exampleInputUsername1"
+                            name ="weight[]"
+                            placeholder="Enter Product Weight (E.g, 3ML, 6ML)"
+                          />
+                          <a href="#" id ="add_more_weight" class="btn btn-primary me-2">
+                          Add More
+                          </a>
                         </div>
 </div>
                         <div class="form-group weight_div">
@@ -368,13 +369,13 @@
                           type="text"
                           class="form-control"
                           id="exampleInputUsername1"
-                          name ="add_sub_cat"
+                          name ="price[]"
                           placeholder="Enter Product Price (E.g, 3ML, 6ML)"
                         />
                         </div>
                         <div class="form-group weight_price_div">
                         </div>
-                      <button type="submit" class="btn btn-primary me-2">
+                      <button type="submit" class="btn btn-primary me-2 sub">
                         Submit
                       </button>
                     </form>

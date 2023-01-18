@@ -28,7 +28,6 @@ class ProductController extends Controller
     public function cat_ajax($id)
     {
         //
-        
         $all_data = SubCatModel::join('categories', 'categories.id', '=', 'subcats.cat_id')
         ->select('subcats.*', 'categories.cat_name')->where('cat_id',$id)
         ->get();
@@ -54,6 +53,13 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
+        $cat_id = $request->input('cat_id');
+        $sub_cat_id = $request->input('sub_cat_id');
+        $prod_name = $request->input('prod_name');
+        $weight = $request->input('weight');
+        $price = $request->input('price');
+        $img = $request->input('prod_image');
+        echo $weight;
     }
 
     /**
