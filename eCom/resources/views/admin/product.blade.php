@@ -393,24 +393,22 @@
                         <thead>
                           <tr>
                             <th>SL</th>
-                            <th>Category Name</th>
-                            <th>Sub Category Name</th>
-                            <th>Action </th>
+                            <th>Image</th>
+                            <!-- <th>Sub Category Name</th>
+                            <th>Action </th> -->
                           </tr>
                         </thead>
-                        <!-- <tbody>
-                          @if(isset($subcats))
-                            @foreach($subcats as $d)
+                        <tbody>
+                          @if(isset($prod_data))
+                            @foreach($prod_data as $prod_d)
                             <tr>
                               <td>{{$loop->iteration}}</td>
-                              <td>{{$d->cat_name}}</td>
-                              <td>{{$d->sub_cat_name}}</td>
-                              <td><a href="{{url('update_id/'.$d->id)}}">Edit</a> Delete</td>
+                              <td><img src='{{asset("storage/".$prod_d->prod_image)}}'></td>
                             </tr>
                             @endforeach
                           
                           @endif
-                        </tbody> -->
+                        </tbody>
                       </table>
                     </div>
                   </div>

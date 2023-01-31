@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\CatModel;
 use App\Models\SubCatModel;
+use App\Models\ProductModel;
 
 class ProductController extends Controller
 {
@@ -21,8 +22,11 @@ class ProductController extends Controller
         $cat_data = $cat_model->get();
         $sub_cat_model = new SubCatModel();
         $sub_cat_data = $sub_cat_model->get();
+        $prod = new ProductModel();
+        $prod_data = $prod->get();
+        
 
-        return view('admin.product',compact('cat_data','sub_cat_data'));
+        return view('admin.product',compact('cat_data','sub_cat_data','prod_data'));
     }
 
     public function cat_ajax($id)
@@ -56,10 +60,20 @@ class ProductController extends Controller
         $cat_id = $request->input('cat_id');
         $sub_cat_id = $request->input('sub_cat_id');
         $prod_name = $request->input('prod_name');
+        $prod_desc = $request->input('prod_desc');
         $weight = $request->input('weight');
         $price = $request->input('price');
-        $img = $request->input('prod_image');
-        echo $weight;
+        $img = $request->file('prod_image')->store('public/images');
+        $prod = new ProductModel();
+        $prod->cat_id = $cat_id;
+        $prod->sub_cat_id = $sub_cat_id;
+        $prod->prod_name = $prod_name;
+        $prod->prod_desc = $prod_desc;
+        $prod->prod_image = $img;
+        $prod->prod_weight = $weight;
+        $prod->prod_price = $price;
+
+        $prod->save();
     }
 
     /**
