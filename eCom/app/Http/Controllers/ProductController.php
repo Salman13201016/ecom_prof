@@ -23,7 +23,11 @@ class ProductController extends Controller
         $sub_cat_model = new SubCatModel();
         $sub_cat_data = $sub_cat_model->get();
         $prod = new ProductModel();
-        $prod_data = $prod->get();
+        $prod_data = $prod->join('categories', 'categories.id', '=', 'products.cat_id')
+        ->join('subcats','subcats.id','=','products.sub_cat_id')
+        ->select('products.*', 'categories.cat_name','subcats.sub_cat_name')
+        ->get();
+        // dd($prod_data);
         
 
         return view('admin.product',compact('cat_data','sub_cat_data','prod_data'));

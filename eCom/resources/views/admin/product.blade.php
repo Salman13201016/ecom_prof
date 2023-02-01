@@ -393,9 +393,12 @@
                         <thead>
                           <tr>
                             <th>SL</th>
-                            <th>Image</th>
-                            <!-- <th>Sub Category Name</th>
-                            <th>Action </th> -->
+                            <th>Category</th>
+                            <th>Sub Category</th>
+                            <th>Product Name</th>
+                            <th>Product Details</th>
+                            <th>Product Image</th>
+                            <!-- <th>Action </th> -->
                           </tr>
                         </thead>
                         <tbody>
@@ -403,6 +406,10 @@
                             @foreach($prod_data as $prod_d)
                             <tr>
                               <td>{{$loop->iteration}}</td>
+                              <td>{{$prod_d->cat_name}}</td>
+                              <td>{{$prod_d->sub_cat_name}}</td>
+                              <td>{{$prod_d->prod_desc}}</td>
+                              <td>{{$prod_d->prod_name}}</td>
                               <td><img src='{{asset("storage/".$prod_d->prod_image)}}'></td>
                             </tr>
                             @endforeach

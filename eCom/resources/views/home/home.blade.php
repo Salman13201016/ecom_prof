@@ -856,7 +856,8 @@
           <h3 class="section-title">Special Deals</h3>
           <div class="sidebar-widget-body outer-top-xs">
             <div class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">
-              <div class="item">
+            
+            <div class="item">
                 <div class="products special-product">
                   <div class="product">
                     <div class="product-micro">
@@ -1287,11 +1288,12 @@
             <div class="tab-pane in active" id="all">
               <div class="product-slider">
                 <div class="owl-carousel home-owl-carousel custom-carousel owl-theme" data-item="4">
-                  <div class="item item-carousel">
+                @foreach($latest_prod_data as $l)  
+                <div class="item item-carousel">
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p1.jpg" alt=""></a> </div>
+                          <div class="image"> <a href="detail.html"><img src='{{asset("storage/".$l->prod_image)}}'>"</a> </div>
                           <!-- /.image -->
                           
                           <div class="tag new"><span>new</span></div>
@@ -1299,10 +1301,8 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <h3 class="name"><a href="detail.html">{{$l->prod_name}}</a></h3>
+                          <div class="product-price"> <span class="price"> {{$l->prod_price}} </span> </div>
                           <!-- /.product-price --> 
                           
                         </div>
@@ -1327,6 +1327,7 @@
                     </div>
                     <!-- /.products --> 
                   </div>
+                  @endforeach
                   <!-- /.item -->
                   
                   <div class="item item-carousel">
