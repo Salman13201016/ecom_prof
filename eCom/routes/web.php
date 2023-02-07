@@ -36,4 +36,7 @@ Route::post('/insertSubCat', [SubCatController::class,'insert']);
 Route::get('/home', [HomeController::class,'home']);
 
 Route::get('/product/cat_ajax/{id}', [ProductController::class,'cat_ajax']);
+Route::get('/product/product_details',[ProductController::class,'details']);
 Route::resource('/product',ProductController::class);
+
+

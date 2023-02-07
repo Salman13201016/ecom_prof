@@ -17,6 +17,7 @@ class HomeController extends Controller
         $data =SubCatModel::with(['category'])->get()->groupBy('cat_id');
         $latest_product = new ProductModel();
         $latest_prod_data = $latest_product->latest()->take(4)->get();
+        $all_prod_data = $latest_product->get();
         // dd($prod_data);
 
         // dd($data);
@@ -27,6 +28,6 @@ class HomeController extends Controller
         // dd($data);
         
         // return view('admin.sub_cat');
-        return view('home.home',compact('data','latest_prod_data'));
+        return view('home.home',compact('data','latest_prod_data','all_prod_data'));
     }
 }

@@ -52,6 +52,10 @@ class ProductController extends Controller
         //
     }
 
+    public function details(){
+        return view('home/prod_details');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
