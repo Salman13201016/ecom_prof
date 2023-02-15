@@ -52,8 +52,12 @@ class ProductController extends Controller
         //
     }
 
-    public function details(){
-        return view('home/prod_details');
+    public function details($id){
+        
+        $prod = ProductModel::find($id);
+        // $prod->where('id', '=', $id)->get();
+        // dd($prod);
+        return view('home/prod_details', compact('prod'));
     }
 
     /**
