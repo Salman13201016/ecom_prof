@@ -12,7 +12,11 @@
 <title>Flipmart premium HTML5 & CSS3 Template</title>
 
 <!-- Bootstrap Core CSS -->
+<<<<<<< HEAD
 <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+=======
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+>>>>>>> 647666c4774b3c0317146f181e13808b545d5738
 
 <!-- Customizable CSS -->
 <link rel="stylesheet" href="{{asset('/assets/css/main.css')}}">
@@ -1613,17 +1617,17 @@
     <!-- For demo purposes – can be removed on production : End -->
 
     <!-- JavaScripts placed at the end of the document so the pages load faster -->
-    <script src="{{asset('assets/js/jquery-1.11.1.min.js')}}"></script> 
-<script src="{{asset('assets/js/bootstrap.min.js')}}"></script> 
-<script src="{{asset('assets/js/bootstrap-hover-dropdown.min.js')}}"></script> 
-<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script> 
-<script src="{{asset('assets/js/echo.min.js')}}"></script> 
-<script src="{{asset('assets/js/jquery.easing-1.3.min.js')}}"></script> 
-<script src="{{asset('assets/js/bootstrap-slider.min.js')}}"></script> 
-<script src="{{asset('assets/js/jquery.rateit.min.js')}}"></script> 
-<script type="text/javascript" src="assets/js/lightbox.min.js')}}"></script> 
-<script src="{{asset('assets/js/bootstrap-select.min.js')}}"></script> 
-<script src="{{asset('assets/js/wow.min.js')}}"></script> 
+    <script src="{{asset('assets/js/jquery-1.11.1.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap-hover-dropdown.min.js')}}"></script>
+<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('assets/js/echo.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.easing-1.3.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap-slider.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.rateit.min.js')}}"></script>
+<script type="text/javascript" src="assets/js/lightbox.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap-select.min.js')}}"></script>
+<script src="{{asset('assets/js/wow.min.js')}}"></script>
 <script src="{{asset('assets/js/scripts.js')}}"></script>
 
 
