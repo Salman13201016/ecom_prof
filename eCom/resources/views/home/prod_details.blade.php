@@ -12,11 +12,7 @@
 <title>Flipmart premium HTML5 & CSS3 Template</title>
 
 <!-- Bootstrap Core CSS -->
-<<<<<<< HEAD
 <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
-=======
-<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
->>>>>>> 647666c4774b3c0317146f181e13808b545d5738
 
 <!-- Customizable CSS -->
 <link rel="stylesheet" href="{{asset('/assets/css/main.css')}}">
@@ -884,10 +880,10 @@
                                                 <div class="cart-quantity">
                                                     <div class="quant-input">
                                                         <div class="arrows">
-                                                            <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
-                                                            <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
+                                                            <div class="arrow plus gradient" id="inc"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
+                                                            <div class="arrow minus gradient" id='dec'><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
                                                         </div>
-                                                        <input type="text" value="1">
+                                                        <input id="prod_quan" type="text" value="1">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1629,6 +1625,7 @@
 <script src="{{asset('assets/js/bootstrap-select.min.js')}}"></script>
 <script src="{{asset('assets/js/wow.min.js')}}"></script>
 <script src="{{asset('assets/js/scripts.js')}}"></script>
+<script src="{{asset('assets/js/prod_details.js')}}"></script>
 
 
 </body>
